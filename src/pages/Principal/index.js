@@ -1,12 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { Text, Alert, ActivityIndicater } from 'react-native';
+import { Text, Alert, ActivityIndicator } from 'react-native';
 
-import { SafeAreaView, Image, View, ButtonContainer } from './style.js';
-
-import { Text } from 'react-native';
-import banner from '../../assets/img/banner.png';
-import Button from '../../components/Button';
+import {
+  SafeAreaView,
+  ViewActivity,
+  CategoriaView,
+  BannerView,
+  ViewPrincipal,
+  ViewRestaurantes,
+  TituloRestaurantes,
+  ButtonTipoSelect,
+  TextTipoSelect,
+  SelectTipo
+} from './style';
 
 
 export default function Principal() {
@@ -29,7 +36,7 @@ export default function Principal() {
         const data = await response.json();
 
 
-        setLoaded(true)
+        //setLoaded(true);
 
 
         setBanners(data.banner_principal);
@@ -53,6 +60,18 @@ export default function Principal() {
     <>
       <StatusBar style='theme-dark' />
       <SafeAreaView>
+        {loaded
+          ?
+            (
+              <ViewHome />
+            )
+            :
+            (
+              <ViewActivity >
+                <ActivityIndicator color="#F0001A" size="large" />
+                <Text>Carregando dados aguarde...{loaded}</Text>
+              </ViewActivity>
+          )}
       </SafeAreaView>
     
     </>

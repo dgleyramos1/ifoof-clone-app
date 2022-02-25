@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { SafeAreaView, Image, View, ButtonContainer } from './style';
+import { SafeAreaView, Image, View, ButtonContainer } from './style.js';
 
 import { Text } from 'react-native';
 import banner from '../../assets/img/banner.png';
@@ -20,7 +20,7 @@ export default function Home() {
         </View>
         <ButtonContainer>
           <Button text="PULAR" onPress={() => {}}/>
-          <Button text="ENTRAR" theme="primary"/>
+          <Button theme="primary" text="ENTRAR"/>
         </ButtonContainer>
       </SafeAreaView>
     

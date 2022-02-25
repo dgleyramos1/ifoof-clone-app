@@ -16,9 +16,9 @@ import {
 
 
 
-import CategoriaItem from '../../components/CategoriaItem'
-import BannerItem from '../../components/BannerItem'
-import RestauranteItem from '../../components/RestauranteItem'
+import CategoriaItem from '../../components/CategoriaItem';
+import BannerItem from '../../components/BannerItem';
+import RestauranteItem from '../../components/RestauranteItem';
 
 
 export default function Principal() {

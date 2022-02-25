@@ -13,13 +13,13 @@ export default function Home() {
       <StatusBar style='theme-dark' />
       <SafeAreaView>
         <View>
-          <Text>Pedir comida nunca foi tão fácil</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 18 }}>Pedir comida nunca foi tão fácil</Text>
           <Image source={banner}/>
-          <Text>Permitir localização</Text> 
+          <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Permitir localização</Text> 
           <Text>Para descobrir restaurantes que entregam em sua região</Text> 
         </View>
         <ButtonContainer>
-          <Button text="PULAR" onPress={() => {}}/>
+          <Button text="PULAR" onPress={() => {navigation.navigate('Main')}}/>
           <Button theme="primary" text="ENTRAR"/>
         </ButtonContainer>
       </SafeAreaView>
